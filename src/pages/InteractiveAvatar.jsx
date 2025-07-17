@@ -1038,13 +1038,15 @@ const API_URL = process.env.REACT_APP_BASE_API_URL;
       timestamp: new Date().toISOString(),
       chatHistory: chat,
     };
+    console.log('Payload 1',payload );
+
     payload = replaceEmptyWithNA(payload);
-    console.log(payload, 'Payload');
+    console.log('Payload 2',payload );
 
     try {
       const response = await fetch(
         // 'https://api.goodtogoapps.com/api/form-data',
-         'http://localhost:3001/api/disability-appeal',
+         'http://localhost:3002/api/disability-appeal',
 
         {
           method: 'POST',
